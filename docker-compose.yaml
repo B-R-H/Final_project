@@ -2,8 +2,10 @@ version: "3.7"
 services:
   backend:
     image: springcommunity/spring-petclinic-rest
-  
-  mysql:
+    ports:     
+     -  "9966:9966"
+
+  db:
     image: mysql:5.7
     ports:
       - "3306:3306"
@@ -15,7 +17,9 @@ services:
       - MYSQL_DATABASE=petclinic
     volumes:
       - "./conf.d:/etc/mysql/conf.d:ro"
+
   frontend:
     image: springcommunity/spring-framework-petclinic
     ports:
      -  "8080:8080"
+     -  "4200:4200"
