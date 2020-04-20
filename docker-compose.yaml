@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   backend:
-    image: springcommunity/spring-petclinic-rest
+    image: mattcrutchley/petsserver
     ports:     
      -  "9966:9966"
 
