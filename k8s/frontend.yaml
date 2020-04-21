@@ -15,11 +15,13 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: barnabyrh/spcfrontend:v1
+        image: barnabyrh/spcfrontend:v8
         ports:
         - name: frontend-port
           containerPort: 4200
-
+        env:
+        - name: BACKEND_IP
+          value: 65.52.120.134
 
 ---
 
