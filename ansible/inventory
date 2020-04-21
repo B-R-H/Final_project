@@ -1,0 +1,8 @@
+[jenkins]
+52.151.86.50
+
+
+[jenkins:vars]
+ansible_user=fergus
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/id_rsa
