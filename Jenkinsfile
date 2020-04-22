@@ -1,6 +1,6 @@
 pipeline{   
       agent any
-      steps{
+      stages{
       stage('Test'){
         steps{
           sh '''
