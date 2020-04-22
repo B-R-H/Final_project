@@ -4,8 +4,8 @@ pipeline{
       stage('Test'){
         steps{
           sh '''
-                docker run mattcrutchley/petsbackend -n backend
-                docker exec backend <<EOF
+                sudo docker run mattcrutchley/petsbackend -n backend
+                sudo docker exec backend <<EOF
                 /mvnw test
       EOF
              '''   
