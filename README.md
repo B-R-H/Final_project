@@ -55,7 +55,7 @@ And\
 <summary>Exspand to see the previous iterations of the infrastucture design</summary>
 
 #### Mark 1
-![alt text](media/Infrastructure_mk1.png)
+![alt text](media/infrastructure_mk1.png)
 The first idea had a completly seprate testng enviroment with on vm to run the app on using docker and then a second vm running nginx to proxy pass to the dcker vm. The Jenkins vm is only used for Jenkins and has access to the testing and production enviroments. The deployment is done though a managed kubernetues cluster with a nginx load ballencer service.
 
 #### Mark 2 
