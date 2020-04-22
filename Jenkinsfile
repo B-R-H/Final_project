@@ -4,14 +4,13 @@ pipeline{
       stage('Test'){
         steps{
           sh '''
-                sudo docker run -d --name backend mattcrutchley/petsbackend
-                sudo docker exec backend sh <<EOF
-                /mvnw test
-                pwd
-      EOF
-      sudo docker stop backend
-      sudo docker rm backend 
-      sudo docker rmi mattcrutchley/petsbackend
+            
+            rm -rf spring-petclinic-rest
+            git clone https://github.com/spring-petclinic/spring-petclinic-rest.git
+            cd spring-petclinic-rest
+            mvn test
+            
+            
              '''   
         }
     } 
