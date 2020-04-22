@@ -77,6 +77,8 @@ The second design varied only slightly from the first the only difrence was that
 
 <a name="CI"></a>
 ## CI pipeline
+
+In the CI pipline we have used git for our source controll, the infrastructure is built using terraform and then configured using ansible. Jenkings was chosen as to manage our continous intergration and the production deployment is done on Azure using Kubernetties.
 ![alt text](media/CI.jpg)
 
 <a name="RI"></a>
