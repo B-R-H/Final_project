@@ -5,7 +5,7 @@ pipeline{
         steps{
           sh '''
                 sudo docker run mattcrutchley/petsbackend -n backend
-                sudo docker exec backend <<EOF
+                sudo docker exec backend sh <<EOF
                 /mvnw test
       EOF
              '''   
