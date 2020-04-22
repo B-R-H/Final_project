@@ -1,0 +1,26 @@
+- name: Updates 
+  hosts: all
+  become: true
+  tasks:
+  - name: Updating 
+    command: sudo apt-get update -y
+
+  - name: Java
+    become: true
+    shell: sudo apt install openjdk-8-jdk -y
+
+- hosts: jenkins
+  become: true
+  roles:
+    - ansible-role-jenkins
+  tasks:
+  - name: Jenkins User
+    command: sudo usermod -aG sudo jenkins
+  - name: Get init password Jenkins
+    shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+    changed_when: false
+    register: result
+  - name: Print init password Jenkins
+    debug:
+      var: result.stdout
+
