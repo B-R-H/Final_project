@@ -5,9 +5,12 @@ pipeline{
         steps{
           sh '''
                 sudo docker run -d --name backend mattcrutchley/petsbackend
-                sudo docker exec backend sh <<EOF
+                sudo docker exec -it backend sh <<EOF
                 /mvnw test
       EOF
+      sudo docker stop backend
+      sudo docker rm backend 
+      sudo docker rmi mattcrutchley/petsbackend
              '''   
         }
     } 
