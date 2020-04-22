@@ -4,7 +4,7 @@ pipeline{
       stage('Test'){
         steps{
           sh '''
-                sudo docker run --name backend mattcrutchley/petsbackend
+                sudo docker run -d --name backend mattcrutchley/petsbackend
                 sudo docker exec backend sh <<EOF
                 /mvnw test
       EOF
