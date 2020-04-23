@@ -26,7 +26,7 @@ pipeline{
             sleep 2m
             kubectl get service nginx -o custom-columns=IP:status.loadBalancer.ingress[0].ip > test.txt
             export NGINX_IP=$(sed -n 2p test.txt)
-	    sed 's/{{NGINX_IP}}/$NGINX_IP/g' k8s/frontend.yaml
+	    sed 's/localhost/${NGINX_IP}/g' k8s/frontend.yaml
             kubectl apply -f k8s
             '''
            }
