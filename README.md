@@ -46,7 +46,7 @@ To give clarity on what tasks needed to be run first we prioritise. This was don
 Our current service infrastructure looks like this.
 ![alt text](media/Infrastructure_mk3.png)
 
-This implemtation has the testing done on the vm with jenkins on it using docker. The main deploymnt is then done using a managed kuberneties service on azure.
+This implemtation has the testing done on the vm with jenkins on it using docker. The main deployment is then done using a managed kuberneties service on azure.
 
 All of the infrastructure can be spun up using terrafrom scripts that use an azure subcription. The scripts are designed in such a way that they pull the terraform workspace to use as the the name of the resources being deployed. This allows for identical infrastructure to be spun up for developers to test new features on more exstensivly if the automated test arn't surficent.
 
