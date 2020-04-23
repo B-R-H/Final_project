@@ -25,7 +25,8 @@ pipeline{
             git checkout develop
             kubectl apply -f k8s
             sleep 10s
-            export NGINX_IP= $(kubectl get service nginx -o custom-columns=:status.loadBalancer.ingress[0].ip)
+            export NGINX_IP=$(kubectl get service nginx -o custom-columns=:status.loadBalancer.ingress[0].ip)
+            echo ${NGINX_IP:1:}
             while [${NGINX_IP} -eq <none>]
             do
             sleep 1s
