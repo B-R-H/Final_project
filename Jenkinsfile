@@ -23,6 +23,7 @@ pipeline{
             cd Final_project
             git checkout develop
             kubectl apply -f k8s
+	    sleep 2m
             kubectl get service nginx -o custom-columns=IP:status.loadBalancer.ingress[0].ip > test.txt
             export NGINX_IP=$(sed -n 2p test.txt)
 	    cat k8s/frontend.yaml
