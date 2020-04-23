@@ -30,10 +30,10 @@ kind: Service
 metadata:
   name: frontend
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-    - port: 80
-      targetPort: 4200
+  - protocol: TCP
+    port: 4200
   selector:
     app: frontend
 
