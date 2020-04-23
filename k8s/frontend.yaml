@@ -21,7 +21,7 @@ spec:
           containerPort: 4200
         env:
         - name: BACKEND_IP
-          value: 137.135.46.46
+          value: ${NGINX_IP}
 
 ---
 
