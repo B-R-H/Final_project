@@ -19,6 +19,7 @@ pipeline{
             sh '''
            
             cd 
+            rm -rf Final_project
             git clone https://github.com/B-R-H/Final_project.git
             cd Final_project
             git checkout develop
