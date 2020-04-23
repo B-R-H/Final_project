@@ -50,7 +50,7 @@ This implemtation has the testing done on the vm with jenkins on it using docker
 
 All of the infrastructure can be spun up using terrafrom scripts that use an azure subcription. The scripts are designed in such a way that they pull the terraform workspace to use as the the name of the resources being deployed. This allows for identical infrastructure to be spun up for developers to test new features on more exstensivly if the automated test arn't surficent.
 
-### Kubernetis terraform use
+### Kubernetes terraform use
 To run the Kubernetes terraform files you will need to have a service principle set up and have the client id and client secret on hand. If not these can be configured using the azure cli with\
 ```az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/your_subscription_id"```
 To link it to kubectl you will need to run\
@@ -78,7 +78,7 @@ The second design varied only slightly from the first the only difrence was that
 <a name="CI"></a>
 ## CI pipeline
 
-In the CI pipline we have used git for our source controll, the infrastructure is built using terraform and then configured using ansible. Jenkings was chosen as to manage our continous intergration and the production deployment is done on Azure using Kubernetties.
+In the CI pipeline we have used git for our source controll, the infrastructure is built using terraform and then configured using ansible. Jenkings was chosen as to manage our continous intergration and the production deployment is done on Azure using Kubernetties.
 ![alt text](media/CI.jpg)
 
 <a name="RI"></a>
@@ -97,7 +97,7 @@ The front end tests are run through a browser using one of the testing images of
 
 <a name="BET"></a>
 ### Back end 
-To test the back end the reposity that contains the code and then run the `mvn test` command. If you want to test that the docker image that you are running then you need to exec into the container and run `/mvnw test`. Theses commands run the same tests that cover the entire backend.
+To test the back end the reposity that contains the code and then run the `mvn test` command. If you want to test that the docker image that you are running then you need to exec into the container and run `/mvnw test`. These commands run the same tests that cover the entire backend.
 
 ![alt text](media/BET.png)
 
