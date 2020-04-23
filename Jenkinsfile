@@ -19,6 +19,12 @@ pipeline{
             sh '''
            
             cd 
+            c=1
+            while [ $c -le 5 ]
+            do
+	      echo "Welcone $c times"
+	      (( c++ ))
+            done
             rm -rf Final_project
             git clone https://github.com/B-R-H/Final_project.git
             cd Final_project
