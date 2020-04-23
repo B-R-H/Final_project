@@ -22,6 +22,9 @@ spec:
         env:
         - name: BACKEND_IP
           value: 65.52.120.134
+        resources:
+          requests:
+            cpu: "150m"
 
 ---
 
@@ -36,3 +39,18 @@ spec:
       targetPort: 4200
   selector:
     app: frontend
+
+---
+
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: frontend
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: frontend
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
