@@ -4,7 +4,7 @@ Last project deployment of a full app spring pet clinic app using an [angular fr
 
 ## Contents
 * [Run instructions](#RI)
-* [Project breif](#PB)
+* [Project brief](#PB)
 * [Introduction](#Intro)
 * [MoSCoW priority](#MOSCOW)
 * [Service Infrastructure](#SI)
@@ -14,7 +14,7 @@ Last project deployment of a full app spring pet clinic app using an [angular fr
   - [Front end](#FET)
   - [Back end](#BET)
   - [End to end](#e2e)
-* [Cost ananlysis](#CA)
+* [Cost analysis](#CA)
 * [Conclusion](#conclusion)
 
 <a name="RI"></a>
