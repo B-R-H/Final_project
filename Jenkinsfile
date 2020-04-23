@@ -18,13 +18,6 @@ pipeline{
            steps{
             sh '''
             #!/bin/bash
-            cd 
-            c=1
-            while [ $c -le 5 ]
-            do
-	      echo "Welcone $c times"
-	      (( c++ ))
-            done
             rm -rf Final_project
             git clone https://github.com/B-R-H/Final_project.git
             cd Final_project
@@ -33,6 +26,7 @@ pipeline{
             sleep 2m
             kubectl get service nginx -o custom-columns=IP:status.loadBalancer.ingress[0].ip > test.txt
             export NGINX_IP=$(sed -n 2p test.txt)
+	    sed 's/{{NGINX_IP}}/${NGINX_IP}/' k8s/frontend.yaml
             kubectl apply -f k8s
             '''
            }
