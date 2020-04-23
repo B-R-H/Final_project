@@ -17,7 +17,7 @@ pipeline{
         stage('Deploy'){
            steps{
             sh '''
-           
+            #!/bin/bash
             cd 
             c=1
             while [ $c -le 5 ]
