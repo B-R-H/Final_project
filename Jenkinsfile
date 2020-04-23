@@ -25,15 +25,17 @@ pipeline{
             git checkout develop
             kubectl apply -f k8s
             sleep 10s
-            export NGINX_IP=$(kubectl get service nginx -o custom-columns=:status.loadBalancer.ingress[0].ip)
-            echo ${NGINX_IP:1:}
+            kubectl get service nginx -o custom-columns=IP:status.loadBalancer.ingress[0].ip > test.txt
+            export NGINX_IP=$(sed -n 2p test.txt)
             while [${NGINX_IP} -eq <none>]
             do
             sleep 1s
-            export NGINX_IP=$(kubectl get service nginx -o custom-columns=:status.loadBalancer.ingress[0].ip)
+            kubectl get service nginx -o custom-columns=IP:status.loadBalancer.ingress[0].ip > test.txt
+            export NGINX_IP=$(sed -n 2p test.txt)
             done
             kubectl apply -f k8s
             export NGINX_IP=<none>
+            rm test.txt
             '''
            }
         }
