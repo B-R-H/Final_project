@@ -12,7 +12,21 @@ pipeline{
             
             
              '''   
+          }
+       }
+        stage('Deploy'){
+           steps{
+            sh '''
+           
+            cd 
+            git clone https://github.com/B-R-H/Final_project.git
+            cd Final_project
+            git checkout develop
+            kubectl apply -f k8s
+            
+            '''
+           }
         }
-    } 
-}
+            
+    }
 }
