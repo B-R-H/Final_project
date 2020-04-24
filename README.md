@@ -7,7 +7,7 @@ Last project deployment of a full app spring pet clinic app using an [angular fr
 * [Project brief](#PB)
 * [Introduction](#Intro)
 * [MoSCoW priority](#MOSCOW)
-* [Sprint_Discussion](#Sprint Discussion)
+* [Sprint Discussion](#Sprint Discussion)
 * [Service Infrastructure](#SI)
 * [Continuous integration pipeline](#CI)
 * [Risk assessment](#RI)
