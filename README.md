@@ -7,6 +7,7 @@ Last project deployment of a full app spring pet clinic app using an [angular fr
 * [Project brief](#PB)
 * [Introduction](#Intro)
 * [MoSCoW priority](#MOSCOW)
+* [Sprint_Discussion](#Sprint Discussion)
 * [Service Infrastructure](#SI)
 * [Continuous integration pipeline](#CI)
 * [Risk assessment](#RI)
@@ -40,6 +41,28 @@ From the user stories we created isues that could then be put into sprint boards
 <a name="MOSCOW"></a>
 ## MoSCoW priority
 To give clarity on what tasks needed to be run first we prioritise. This was done using custom labels for the github issues wich allowed us to search by urgency.
+
+<a name="Sprint Discussion"></a>
+## Sprint Discussion
+### Friday Sprint 
+First day of the project. This saw us plan the project and our workload for the coming week. This went well and we had time to look over the repositories we were working with and have a play about with them. This put us in good stead for our first sprint Monday.
+![alt text](media/Friday Sprint.PNG)
+
+### Sprint 1
+The first day of actual project work was successful. As the image below shows we were able to get most of the jobs for that day complete, only carrying over 2 jobs to the next day.
+![alt text](media/sprint1.1.PNG)
+
+### Sprint 2
+Tuesday was a slower day with some more challenging tasks across the board. Only 4 tasks got fully completed and each member of the team was stuck on individual problems throughout the day. In particular, the mysql database proved to be a real struggle. It was agreed that this would be put on hold in order to get other things completed.
+![alt text](media/sprint2.1.PNG)
+
+### Sprint 3
+Wednesday was more successful than the previous day. The problems people were stuck on previously had been solved and the project was looking good for Thursday’s sprint.
+![alt text](media/sprint3.1.PNG)
+
+### Sprint 4
+This was the final sprint for the group and Wednesday had left us in a good place to finish up today. We had to finalise the Jenkins job and get the kubernetes deployment working properly. Also finish off the powerpoint and documentation ready for practice runs on Friday morning.
+![alt text](media/sprint4.1.PNG)
 
 <a name="SI"></a>
 ## Service Infrastructure
@@ -119,3 +142,5 @@ The minium cost per month with this set up is £95.58 this assumes that the Kube
 
 <a name="conclusion"></a>
 ## Conclusion
+
+Overall this project has been a success. The group worked well together and the final product meets the project brief. The use of GitHub project boards and the issue queue was particularly useful in delegating tasks and organising the team. Moving forward with the project we would like to get a managed MySQL instance working with the application for better workflow across the project.
