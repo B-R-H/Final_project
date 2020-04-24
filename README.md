@@ -7,7 +7,7 @@ Last project deployment of a full app spring pet clinic app using an [angular fr
 * [Project brief](#PB)
 * [Introduction](#Intro)
 * [MoSCoW priority](#MOSCOW)
-* [Sprint Discussion](#Sprint Discussion)
+* [Sprint Discussion](#Sprint_Discussion)
 * [Service Infrastructure](#SI)
 * [Continuous integration pipeline](#CI)
 * [Risk assessment](#RI)
@@ -42,7 +42,7 @@ From the user stories we created isues that could then be put into sprint boards
 ## MoSCoW priority
 To give clarity on what tasks needed to be run first we prioritise. This was done using custom labels for the github issues wich allowed us to search by urgency.
 
-<a name="Sprint Discussion"></a>
+<a name="Sprint_Discussion"></a>
 ## Sprint Discussion
 ### Friday Sprint 
 First day of the project. This saw us plan the project and our workload for the coming week. This went well and we had time to look over the repositories we were working with and have a play about with them. This put us in good stead for our first sprint Monday.
